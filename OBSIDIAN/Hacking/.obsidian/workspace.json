@@ -4,35 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "da26319b527e206f",
+        "id": "c46953eaf21ea54e",
         "type": "tabs",
         "children": [
           {
-            "id": "1f838b4efa40ac3e",
+            "id": "b3f0dd62fa56494e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Herramientas 🛠️/WPScan.md",
+                "file": "Vulnerabilidades 💀/Web 🔐/SQLi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WPScan"
+              "title": "SQLi"
             }
           },
           {
-            "id": "cbda5ce1526a860d",
+            "id": "8166f1b9290545c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Herramientas 🛠️/NMAP.md",
+                "file": "Gestores de Contenido 📰/WordPress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NMAP"
+              "title": "WordPress"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 360.5
   },
   "right": {
     "id": "1314145b6a0936b1",
@@ -184,43 +184,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1f838b4efa40ac3e",
+  "active": "b3f0dd62fa56494e",
   "lastOpenFiles": [
-    "Lenguajes de Programación 💻/Ruby 💎.md",
-    "Estructura SO ⌨️/Linux/WordLists.md",
-    "Estructura SO ⌨️/Linux/Proc.md",
-    "Herramientas 🛠️/AWS CLI.md",
-    "Gestores de Contenido 🌐/Cameleon.md",
-    "Herramientas 🛠️/WFUZZ.md",
-    "Herramientas 🛠️/NMAP.md",
-    "Gestores de Contenido 🌐/WordPress.md",
-    "Herramientas 🛠️/Droopescan.md",
-    "Untitled",
-    "Gestores de Contenido 🌐/Joomla.md",
-    "Gestores de Contenido 🌐/Drupal.md",
-    "Gestores de Contenido 🌐/Magento.md",
-    "Herramientas 🛠️/WPScan.md",
-    "Lenguajes de Programación 💻/Lua 🌕.md",
-    "Wordlist.md",
-    "Herramientas 🛠️/Magescan.md",
-    "Glosario 📕/Fuzz.md",
-    "Herramientas 🛠️/Joomscan.md",
-    "Glosario 📕/Wordlist.md",
-    "Lenguajes de Programación 💻/PHP 🐘.md",
-    "Glosario 📕",
-    "Estructura SO ⌨️/Windows",
-    "Estructura SO ⌨️/Linux",
-    "Untitled.md",
-    "Estructura SO ⌨️",
-    "Untitled.base",
-    "Lenguajes de Programación 💻/Python 🐍.md",
-    "Lenguajes de Programación 💻/Perl 🐚.md",
-    "Herramientas 🛠️/WPSeku.md",
-    "Vulnerabilidades ☠/Web 🔐/38. GraphQL Introspection, Mutations e IDORs.md",
-    "Vulnerabilidades ☠/Web 🔐/37. DES-Pickle - Pickle Deserealization Attack.md",
-    "Tecnicas 🧠",
-    "Vulnerabilidades ☠/Web 🔐",
-    "Protocolos",
-    "Lenguajes de Programación 💻"
+    "Gestores de Contenido 📰/WordPress.md",
+    "Vulnerabilidades 💀/Web 🔐/SQLi.md",
+    "Vulnerabilidades 💀/Linux 🐧/Capabilities.md",
+    "Vulnerabilidades 💀/Linux 🐧/CRON Jobs.md",
+    "Vulnerabilidades 💀/Linux 🐧/Sudoers.md",
+    "Vulnerabilidades 💀/Linux 🐧/SUID.md",
+    "Vulnerabilidades 💀/Web 🔐/CORS Misconfiguration.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/DLL.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/NTFS.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/Event Logs.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/Defender.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/PowerShell.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/Services.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/UAC.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/LSASS.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/SAM.md",
+    "Sistemas Operativos ⚙️/Windows 🪟/Registry.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Cron.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Systemd.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Namespaces.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Capabilities.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Permissions.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Tmp.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Var.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Etc.md",
+    "Sistemas Operativos ⚙️/Linux 🐧/Usr.md",
+    "Recursos 📦",
+    "Conceptos 📖",
+    "Metodologías 📚",
+    "Networking 📡",
+    "Cheatsheets 📜",
+    "Bases de Datos 🛢️",
+    "Bases de Datos 🛢️",
+    "Cloud ☁️",
+    "Tecnologias 🧩",
+    "Protocolos 🌐",
+    "Untitled.canvas"
   ]
 }
