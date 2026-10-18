@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c46953eaf21ea54e",
+        "id": "4feca7943bb8804e",
         "type": "tabs",
         "children": [
           {
-            "id": "8166f1b9290545c6",
+            "id": "7e61f2ca3cbcd61d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -170,11 +172,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8166f1b9290545c6",
+  "active": "7e61f2ca3cbcd61d",
   "lastOpenFiles": [
+    "Bases de Datos 🛢️/Redis.md",
+    "Bases de Datos 🛢️/PostgreSQL.md",
+    "Bases de Datos 🛢️/Oracle.md",
+    "Bases de Datos 🛢️/MySQL.md",
+    "Bases de Datos 🛢️/MongoDB.md",
+    "Bases de Datos 🛢️/MariaDB.md",
+    "Tecnologias 🧩/Docker.md",
+    "REGLAS DE USO.md",
+    "Vulnerabilidades 💀/Web 🔐/SQLi.md",
     "Gestores de Contenido 📰/WordPress.md",
     "Burp Suite.md",
-    "Vulnerabilidades 💀/Web 🔐/SQLi.md",
     "Vulnerabilidades 💀/Linux 🐧/Capabilities.md",
     "Vulnerabilidades 💀/Linux 🐧/CRON Jobs.md",
     "Vulnerabilidades 💀/Linux 🐧/Sudoers.md",
@@ -190,14 +200,6 @@
     "Sistemas Operativos ⚙️/Windows 🪟/LSASS.md",
     "Sistemas Operativos ⚙️/Windows 🪟/SAM.md",
     "Sistemas Operativos ⚙️/Windows 🪟/Registry.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Cron.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Systemd.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Namespaces.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Capabilities.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Permissions.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Tmp.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Var.md",
-    "Sistemas Operativos ⚙️/Linux 🐧/Etc.md",
     "Recursos 📦",
     "Conceptos 📖",
     "Metodologías 📚",

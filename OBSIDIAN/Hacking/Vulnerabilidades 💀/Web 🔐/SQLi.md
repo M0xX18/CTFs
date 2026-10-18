@@ -77,6 +77,13 @@ Tambien se podria usar:
 * **database():** Para conocer la base de datos actualmente en uso.
 * **user():** Para conocer el usuario que esta corriendo la base de datos.
 
+## Uso de Limit
+
+a
+```SQL
+
+```
+
 -----------
 ## Payloads
 ### Bypass de Login
